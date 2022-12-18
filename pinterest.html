@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center{
+            text-align: center;
+        }
+        button{
+            top: 1em;
+            left: 36em;
+            z-index: 1;
+            position: absolute;
+            font-weight: bold;
+            font-size: 12pt;
+            width: 67px;
+            height: 47px;
+            background-color: #d91212db;
+            border-radius: 51px;
+            color: white;
+            border: 2px solid #1165a9;
+            cursor: pointer;
+        }
+        h2{
+            font-family: cursive;
+        }
+        .card{
+            position: relative;
+           margin-top: 3em;
+           
+        }
+        .overlay{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 5%;
+            transition: 1s ease;
+            overflow: hidden;
+        }
+        .overlay-icon{
+            position: absolute;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: .5s ease;
+            bottom: -10%;
+        }
+        .card:hover .overlay-icon{
+            opacity: 1;
+            bottom: 0%;
+        }
+        .card:hover .overlay{
+            bottom: 0;
+            height: 100%;
+        }
+        .image:hover{
+            opacity: 0.7;
+        }
+        .image{
+            position: relative;
+            height: 500px;
+            border-radius: 30px;
+        }
+        .icon{
+            display: inline-block;
+            right: 4em;
+            display: inline-block;
+            position: relative;
+            bottom: 1em;
+            font-size: 2rem;
+            color: #d91212db;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="center">Pinterest card</h2>
+    <div class="card center">
+        <div class="overlay">
+        <button>Salva</button>
+        </div>
+        <img class="image" src="https://i.pinimg.com/originals/b1/0d/0c/b10d0c49cfe31661e594c506e57c8a9f.jpg" alt="Tramonto card">
+        <div class="overlay-icon">
+            <div class="icon">
+                <ion-icon name="link-sharp"></ion-icon>   
+                <ion-icon name="cloud-upload-sharp"></ion-icon>
+                <ion-icon name="ellipsis-horizontal-sharp"></ion-icon>
+            </div>
+        </div>
+        
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
